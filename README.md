@@ -1,3 +1,5 @@
+![alt text](codeGuage_preview.gif "codeGauge in action!")
+
 # codeGauge
 Basic gauge component made with CSS style rules & made dynamic with jquery. No SVG or canvas used in this component.
 
@@ -7,18 +9,18 @@ Basic gauge component made with CSS style rules & made dynamic with jquery. No S
 
 ## Available options
 
-|   option	        |  default	|   details	  	|
-|---	            |---	    |---		    |
-|part_1_size  	    |   50	    |Defines the size of Part 1 in percentage|
-|part_2_size   	    |   20	    |Defines the size of Part 2 in percentage|
-|part_3_size   	    |   10	    |Defines the size of Part 3 in percentage|
-|part_4_size   	    |   20	    |Defines the size of Part 4 in percentage|
-|part_1_color   	| #FD5E53	|Defines the color of Part 1|
-|part_2_color   	| #B0EACD	|Defines the color of Part 2|
-|part_3_color   	| #21BF72	|Defines the color of Part 3|
-|part_4_color   	| #B0EACD	|Defines the color of Part 4|
-|marker_position   	|  30 	    |Set marker position between 0 - 100|
-|marker_color   	| #101010   |Set marker color  	 	    |
+|   option	        | default value |   details	  	|
+|---	            |---	        |---		    |
+|part_1_size  	    |   50	        |Defines the size of Part 1 in percentage|
+|part_2_size   	    |   20	        |Defines the size of Part 2 in percentage|
+|part_3_size   	    |   10	        |Defines the size of Part 3 in percentage|
+|part_4_size   	    |   20	        |Defines the size of Part 4 in percentage|
+|part_1_color   	| #FD5E53	    |Defines the color of Part 1|
+|part_2_color   	| #B0EACD	    |Defines the color of Part 2|
+|part_3_color   	| #21BF72	    |Defines the color of Part 3|
+|part_4_color   	| #B0EACD	    |Defines the color of Part 4|
+|marker_position   	|  30 	        |Set marker position between 0 - 100|
+|marker_color   	| #101010       |Set marker color  	 	    |
 
 <br>
 <br>
