@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CodeGauge Demo</title>
+    <meta name="description" content="CodeGauge Demo">
+    <link rel="stylesheet" href="codeGuage.min.css">
+
+    <!-- Demo CSS -->
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #d8d8d8;
+        }
+
+        .gauge-example {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .gauge-example>div {
+            background-color: #ffffff;
+            width: 48%;
+            min-width: 350px;
+            margin: 5px;
+            text-align: center;
+            padding-top: 40px;
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .gauge-example>.gauge-description {
+            padding: 3em;
+            text-align: left;
+        }
+
+        .gauge-example>.gauge-description pre {
+            font-size: 12px;
+        }
+
+        .codeian-gauge {
+            margin: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #c2c2c2;
+            text-align: center;
+            padding: 0.5em;
+            border-top: solid 1px #aeaeae;
+        }
+
+        footer a {
+            color: #0366d6;
+        }
+    </style>
+
+    <!-- Demo CSS ENDS-->
+</head>
+
+<body>
+    <div class="gauge-example">
+        <div>
+
+            <!-- Component Start -->
+            <div id="demoGauge"></div>
+            <h3>Summary Text</h3>
+            <!-- Component Start -->
+
+            <!-- Manually Override handle -->
+            <p>
+                <input type="range" id="gaugeValue-demoGauge" name="gaugeValue" min="0" max="100" value="30"
+                    onInput="updateGauge('demoGauge', 0, 100);" onChange="updateGauge('demoGauge', 0, 100);" />
+            </p>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="codeGuage.min.js"></script>
+
+        <!-- Script to Override handle -->
+        <script type="text/javascript">
+            var myGauge;
+            jQuery( document ).ready(function($) {
+                myGauge = $("#demoGauge").codeGuage({
+                    part_1_size: 70,
+                    part_2_size: 10,
+                    part_3_size: 10,
+                    part_4_size: 10,
+                    part_1_color: '#FD5E53',
+                    part_2_color: '#B0EACD',
+                    part_3_color: '#21BF72',
+                    part_4_color: '#B0EACD',
+                    marker_position: 70,
+                    marker_color: '#111',
+                });
+
+                //Chnge the marker position if needed
+                myGauge.setPosition(60);
+            });
+
+
+            function updateGauge(id, min, max) {
+                const newGaugeDisplayValue = document.getElementById("gaugeValue-" + id).value;
+                myGauge.setPosition(newGaugeDisplayValue);
+            }
+        </script>
+</body>
+
+</html>
